@@ -1,0 +1,27 @@
+//Code 3: C program to demonstrate the memory-efficient usage of this union by storing and displaying each of the above values one at a time.
+//Author: Saba Raushan Hussain Date: 5.11.24
+
+#include <stdio.h>
+
+
+union StudentData {
+    char grade;       
+    int studentID;    
+    float CGPA;      
+};
+
+int main() {
+    union StudentData data;  
+
+
+    data.grade = 'A';
+    printf("Grade: %c\n", data.grade);
+
+    data.studentID = 12345;
+    printf("Student ID: %d\n", data.studentID);
+
+    data.CGPA = 3.85;
+    printf("CGPA: %.2f\n", data.CGPA);
+
+    return 0;
+}
